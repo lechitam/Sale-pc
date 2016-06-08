@@ -14,7 +14,16 @@ function isEmail(string) {
 }
 
 //*******************************************************************************
+function checklengthuser(user)
+{
+	p=document.formthanhvien.user.value;
+	if(p.length<6)
+		return false;
+	else
+		return true;
+}
 
+//*******************************************************************************
 function checklengthpass(pass)
 {
 	p=document.formthanhvien.pass.value;
@@ -66,8 +75,55 @@ function checkmenu(menu)
 	return true;
 }
 
+//*******************************************************************************
+function valid(o,w){
+o.value = o.value.replace(valid.r[w],'');
+}
+valid.r={
+'numbers':/[^\d]/g
+}
 
 //*******************************************************************************
+function Checkimage(hinhanh)
+{
+	var filename = hinhanh;	
+	var dotpos;
+	filename = filename.substring(filename.lastIndexOf("\\")+1,filename.length);
+	dotpos=filename.lastIndexOf('.');
+	ext=filename.substr(dotpos+1,3);
+	ext=ext.toLowerCase();
+	fname=filename.substr(0,dotpos);	
+	if(dotpos==-1||dotpos==0){
+		alert("Đường dẫn không tồn tại");
+		return false;
+	}	
+	if (ext!="")
+		if ((ext!="gif") && (ext!="jpg") && (ext!="png") && (ext!="jpeg") ){
+			alert("File hình không hợp lệ - Chỉ upload được các kiểu hình .jpg - .jpeg - .gif - .png");
+			return false;
+		}
+	
+	return true;
+}
+
+//*********************************************************************************
+function Checkimage2(hinhanh)
+{
+	var filename = hinhanh;	
+	var dotpos;
+	filename = filename.substring(filename.lastIndexOf("\\")+1,filename.length);
+	dotpos=filename.lastIndexOf('.');
+	ext=filename.substr(dotpos+1,3);
+	ext=ext.toLowerCase();
+	fname=filename.substr(0,dotpos);	
+	if (ext!="")
+		if ((ext!="gif") && (ext!="jpg") && (ext!="png") && (ext!="jpeg") ){
+			alert("File hình không hợp lệ - Chỉ upload được các kiểu hình .jpg - .jpeg - .gif - .png");
+			return false;
+		}
+	
+	return true;
+}
 
 //**********************************************************************************
 function lienhe(hoten,email,noidung)
@@ -115,6 +171,23 @@ function gopy(tieude,hoten,email,noidung)
 		return false;
 	}	
 		
+}
+
+//**********************************************************************************
+function onlyNumbers(e)
+{
+	var keynum;
+	var keychar;
+	var numcheck;
+	
+	if(window.event) // IE
+	keynum = e.keyCode;
+	else if(e.which) // Netscape/Firefox/Opera
+	keynum = e.which;
+	keychar = String.fromCharCode(keynum);
+	numcheck = /\d/;
+	return numcheck.test(keychar);
+	onkeydown="return onlyNumbers(event)"
 }
 
 //**********************************************************************************
@@ -224,7 +297,69 @@ function thanhvien_change(hoten,email,diachi,anti)
 return true;
 }
 
+//********************************************************************************
+function thanhvien_changepw(pw_old,pw,cpw)
+{
+	if (isEmpty(pw_old)==false)
+    {
+		alert("Mật khẩu cũ không được rỗng");
+		return false;
+	}
+	
+	if (isEmpty(pw)==false)
+   	 {
+  	   alert("Mật khẩu mới không được rỗng");	
+		 return false;
+		}
+	else 
+	{
+		if (isEmpty(cpw)==false)
+    	{
+	  	   alert("Viết lại Mật khẩu không được rỗng");	
+			 return false;
+		}
+		else
+		{
+			if (pw!=cpw)
+    		{
+	  		   alert("Viết lại Mật khẩu bị sai");	
+				 return false;
+			}
+		}
+	}	
+	
+	if(checklengthpass(pw)==false)
+	{
+		alert("Chiều dài mật khẩu phải lớn hơn 6!");
+		return false;
+	}
+return true;
+}
 
+//*******************************************************************************
+function thanhvien_resetpw(users,email)
+{
+	if (isEmpty(users)==false)
+    {
+		alert("Tên đăng nhập không được phép rỗng");
+		return false;
+	}
+	if(checkuser(users)==false)
+	{
+		alert("Quý khách không được quyền lấy lại mật khẩu của tài khoản quản trị");
+		return false;
+	}
+	if (isEmail(email)==false)
+   	 {
+  	   alert("Email không hợp lệ");	
+		 return false;
+	}
+	
+
+return true;
+}
+
+//*******************************************************************************
 function thanhtoan(hoten,diachi,email,dt)
 {
 	if (isEmpty(hoten)==false)
@@ -254,8 +389,69 @@ function thanhtoan(hoten,diachi,email,dt)
 return true;
 }
 
+//*******************************************************************************
+function sp_insert(loaisp,tensp,hinh,ghichu)
+{
+	if(checkloaisp(loaisp)==false)
+	{
+		alert("Chưa chọn loại sản phẩm!");
+		return false;
+	}
+	
+	if (isEmpty(tensp)==false)
+   	 {
+  	   alert("Chưa nhập tên sản phẩm");	
+		 return false;
+	}
+	
+	if (Checkimage(hinh)==false)
+    {
+		return false;
+	}
+	if(checkmenu(ghichu)==false)
+	{
+  	   alert("Chưa chọn ghi chú");	
+		return false;			
+	}
+return true;
+}
 
+//*******************************************************************************
+function sp_insert_m(menu,tensp,hinh,ghichu)
+{
+	if(checkmenu(menu)==false)
+	{
+		alert("Chưa chọn loại sản phẩm!");
+		return false;
+	}
+	
+	if (isEmpty(tensp)==false)
+   	 {
+  	   alert("Chưa nhập tên sản phẩm");	
+		 return false;
+	}
+	
+	if (Checkimage(hinh)==false)
+    {
+		return false;
+	}
+	if(checkmenu(ghichu)==false)
+	{
+  	   alert("Chưa chọn ghi chú");	
+		return false;			
+	}
+return true;
+}
 
+//*******************************************************************************
+function check()
+{
+	var thongbao=window.confirm("Bạn chắc chắn muốn xóa?");
+  if (thongbao==true)
+  		return true;
+  else 
+		return false;
+}
 
 //*******************************************************************************
 function checklh()
@@ -338,7 +534,25 @@ function tintuc_insert(noidung,ghichu)
 return true;
 }
 
-
+//*******************************************************************************
+function mdkd_insert(loai,ten,hinh)
+{
+	if (checkmenu(loai)==false)
+    {
+		alert("Chưa chọn loại!");
+		return false;
+	}	
+	if(isEmpty(ten)==false)
+	{
+		alert("Chưa nhập tên");	
+		return false;
+	}
+	if (Checkimage(hinh)==false)
+    {
+		return false;
+	}
+return true;
+}
 
 //*******************************************************************************
 function nhomsp_insert(ten)
