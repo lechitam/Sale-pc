@@ -1,0 +1,194 @@
+-- phpMyAdmin SQL Dump
+-- version 2.7.0-pl2
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Jun 02, 2008 at 08:47 AM
+-- Server version: 5.0.21
+-- PHP Version: 5.1.2
+-- 
+-- Database: `nightclub`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tblcountry`
+-- 
+
+CREATE TABLE `tblcountry` (
+  `id` int(5) NOT NULL auto_increment,
+  `name` varchar(30) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=167 ;
+
+-- 
+-- Dumping data for table `tblcountry`
+-- 
+
+INSERT INTO `tblcountry` VALUES (1, 'Albania');
+INSERT INTO `tblcountry` VALUES (2, 'Algeria');
+INSERT INTO `tblcountry` VALUES (3, 'Angola');
+INSERT INTO `tblcountry` VALUES (4, 'Anguilla');
+INSERT INTO `tblcountry` VALUES (5, 'Antigua');
+INSERT INTO `tblcountry` VALUES (6, 'Argentina');
+INSERT INTO `tblcountry` VALUES (7, 'Armenia');
+INSERT INTO `tblcountry` VALUES (8, 'Aruba');
+INSERT INTO `tblcountry` VALUES (9, 'Australia');
+INSERT INTO `tblcountry` VALUES (10, 'Austria');
+INSERT INTO `tblcountry` VALUES (11, 'Azerbaijan');
+INSERT INTO `tblcountry` VALUES (12, 'Bahamas');
+INSERT INTO `tblcountry` VALUES (13, 'Bahrain');
+INSERT INTO `tblcountry` VALUES (14, 'Barbados');
+INSERT INTO `tblcountry` VALUES (15, 'Belarus');
+INSERT INTO `tblcountry` VALUES (16, 'Belgium');
+INSERT INTO `tblcountry` VALUES (17, 'Belize');
+INSERT INTO `tblcountry` VALUES (18, 'Benin');
+INSERT INTO `tblcountry` VALUES (19, 'Bermuda');
+INSERT INTO `tblcountry` VALUES (20, 'Bolivia');
+INSERT INTO `tblcountry` VALUES (21, 'Bonaire');
+INSERT INTO `tblcountry` VALUES (22, 'Bosnia');
+INSERT INTO `tblcountry` VALUES (23, 'Botswana');
+INSERT INTO `tblcountry` VALUES (24, 'Brazil');
+INSERT INTO `tblcountry` VALUES (25, 'British Virgin Islands');
+INSERT INTO `tblcountry` VALUES (26, 'Bulgaria');
+INSERT INTO `tblcountry` VALUES (27, 'Burkina Faso');
+INSERT INTO `tblcountry` VALUES (28, 'Burundi');
+INSERT INTO `tblcountry` VALUES (29, 'Cameroon');
+INSERT INTO `tblcountry` VALUES (30, 'Canada');
+INSERT INTO `tblcountry` VALUES (31, 'Cape Verde');
+INSERT INTO `tblcountry` VALUES (32, 'Cayman Islands');
+INSERT INTO `tblcountry` VALUES (33, 'Chad');
+INSERT INTO `tblcountry` VALUES (34, 'Chile');
+INSERT INTO `tblcountry` VALUES (35, 'China');
+INSERT INTO `tblcountry` VALUES (36, 'Colombia');
+INSERT INTO `tblcountry` VALUES (37, 'Congo');
+INSERT INTO `tblcountry` VALUES (38, 'Costa Rica');
+INSERT INTO `tblcountry` VALUES (39, 'Croatia');
+INSERT INTO `tblcountry` VALUES (40, 'Curacao');
+INSERT INTO `tblcountry` VALUES (41, 'Cyprus');
+INSERT INTO `tblcountry` VALUES (42, 'Czech Republic');
+INSERT INTO `tblcountry` VALUES (43, 'Denmark');
+INSERT INTO `tblcountry` VALUES (44, 'Djibouti');
+INSERT INTO `tblcountry` VALUES (45, 'Dominica');
+INSERT INTO `tblcountry` VALUES (46, 'Dominican Republic');
+INSERT INTO `tblcountry` VALUES (47, 'Ecuador');
+INSERT INTO `tblcountry` VALUES (48, 'Egypt');
+INSERT INTO `tblcountry` VALUES (49, 'El Salvador');
+INSERT INTO `tblcountry` VALUES (50, 'Estonia');
+INSERT INTO `tblcountry` VALUES (51, 'Ethiopia');
+INSERT INTO `tblcountry` VALUES (52, 'Finland');
+INSERT INTO `tblcountry` VALUES (53, 'France');
+INSERT INTO `tblcountry` VALUES (54, 'French Guiana');
+INSERT INTO `tblcountry` VALUES (55, 'Gabon');
+INSERT INTO `tblcountry` VALUES (56, 'Gambia');
+INSERT INTO `tblcountry` VALUES (57, 'Georgia');
+INSERT INTO `tblcountry` VALUES (58, 'Germany');
+INSERT INTO `tblcountry` VALUES (59, 'Ghana');
+INSERT INTO `tblcountry` VALUES (60, 'Gibraltar');
+INSERT INTO `tblcountry` VALUES (61, 'Greece');
+INSERT INTO `tblcountry` VALUES (62, 'Grenada');
+INSERT INTO `tblcountry` VALUES (63, 'Guadeloupe');
+INSERT INTO `tblcountry` VALUES (64, 'Guatemala');
+INSERT INTO `tblcountry` VALUES (65, 'Guinea');
+INSERT INTO `tblcountry` VALUES (66, 'Guyana');
+INSERT INTO `tblcountry` VALUES (67, 'Haiti');
+INSERT INTO `tblcountry` VALUES (68, 'Honduras');
+INSERT INTO `tblcountry` VALUES (69, 'Hong Kong');
+INSERT INTO `tblcountry` VALUES (70, 'Hungary');
+INSERT INTO `tblcountry` VALUES (71, 'India');
+INSERT INTO `tblcountry` VALUES (72, 'Indonesia');
+INSERT INTO `tblcountry` VALUES (73, 'Ireland (Republic of)');
+INSERT INTO `tblcountry` VALUES (74, 'Israel');
+INSERT INTO `tblcountry` VALUES (75, 'Italy');
+INSERT INTO `tblcountry` VALUES (76, 'Ivory Coast');
+INSERT INTO `tblcountry` VALUES (77, 'Jamaica');
+INSERT INTO `tblcountry` VALUES (78, 'Japan');
+INSERT INTO `tblcountry` VALUES (79, 'Jordan');
+INSERT INTO `tblcountry` VALUES (80, 'Kazakhstan');
+INSERT INTO `tblcountry` VALUES (81, 'Kenya');
+INSERT INTO `tblcountry` VALUES (82, 'Kuwait');
+INSERT INTO `tblcountry` VALUES (83, 'Latvia');
+INSERT INTO `tblcountry` VALUES (84, 'Lebanon');
+INSERT INTO `tblcountry` VALUES (85, 'Lesotho');
+INSERT INTO `tblcountry` VALUES (86, 'Lithuania');
+INSERT INTO `tblcountry` VALUES (87, 'Macedonia');
+INSERT INTO `tblcountry` VALUES (88, 'Madagascar');
+INSERT INTO `tblcountry` VALUES (89, 'Malawi');
+INSERT INTO `tblcountry` VALUES (90, 'Malaysia');
+INSERT INTO `tblcountry` VALUES (91, 'Mali');
+INSERT INTO `tblcountry` VALUES (92, 'Malta');
+INSERT INTO `tblcountry` VALUES (93, 'Martinique');
+INSERT INTO `tblcountry` VALUES (94, 'Mauritania');
+INSERT INTO `tblcountry` VALUES (95, 'Mauritius');
+INSERT INTO `tblcountry` VALUES (96, 'Mexico');
+INSERT INTO `tblcountry` VALUES (97, 'Moldova');
+INSERT INTO `tblcountry` VALUES (98, 'Montserrat');
+INSERT INTO `tblcountry` VALUES (99, 'Morocco');
+INSERT INTO `tblcountry` VALUES (100, 'Mozambique');
+INSERT INTO `tblcountry` VALUES (101, 'Netherlands');
+INSERT INTO `tblcountry` VALUES (102, 'New Zealand');
+INSERT INTO `tblcountry` VALUES (103, 'Nicaragua');
+INSERT INTO `tblcountry` VALUES (104, 'Niger');
+INSERT INTO `tblcountry` VALUES (105, 'Nigeria');
+INSERT INTO `tblcountry` VALUES (106, 'Norway');
+INSERT INTO `tblcountry` VALUES (107, 'Oman');
+INSERT INTO `tblcountry` VALUES (108, 'Panama');
+INSERT INTO `tblcountry` VALUES (109, 'Paraguay');
+INSERT INTO `tblcountry` VALUES (110, 'Peru');
+INSERT INTO `tblcountry` VALUES (111, 'Philippines');
+INSERT INTO `tblcountry` VALUES (112, 'Poland');
+INSERT INTO `tblcountry` VALUES (113, 'Portugal');
+INSERT INTO `tblcountry` VALUES (114, 'Puerto Rico');
+INSERT INTO `tblcountry` VALUES (115, 'Qatar');
+INSERT INTO `tblcountry` VALUES (116, 'Reunion');
+INSERT INTO `tblcountry` VALUES (117, 'Romania');
+INSERT INTO `tblcountry` VALUES (118, 'Russia');
+INSERT INTO `tblcountry` VALUES (119, 'Rwanda');
+INSERT INTO `tblcountry` VALUES (120, 'Saudi Arabia');
+INSERT INTO `tblcountry` VALUES (121, 'Senegal');
+INSERT INTO `tblcountry` VALUES (122, 'Seychelles');
+INSERT INTO `tblcountry` VALUES (123, 'Singapore');
+INSERT INTO `tblcountry` VALUES (124, 'Slovakia');
+INSERT INTO `tblcountry` VALUES (125, 'Slovenia');
+INSERT INTO `tblcountry` VALUES (126, 'South Africa');
+INSERT INTO `tblcountry` VALUES (127, 'South Korea');
+INSERT INTO `tblcountry` VALUES (128, 'Spain');
+INSERT INTO `tblcountry` VALUES (129, 'St. Barthelemy');
+INSERT INTO `tblcountry` VALUES (130, 'St. Croix');
+INSERT INTO `tblcountry` VALUES (131, 'St. Eustatius');
+INSERT INTO `tblcountry` VALUES (132, 'St. John');
+INSERT INTO `tblcountry` VALUES (133, 'St. Kitts and Nevis');
+INSERT INTO `tblcountry` VALUES (134, 'St. Lucia');
+INSERT INTO `tblcountry` VALUES (135, 'St. Maarten');
+INSERT INTO `tblcountry` VALUES (136, 'St. Thomas');
+INSERT INTO `tblcountry` VALUES (137, 'St. Vincent and the Grenadines');
+INSERT INTO `tblcountry` VALUES (138, 'Suriname');
+INSERT INTO `tblcountry` VALUES (139, 'Swaziland');
+INSERT INTO `tblcountry` VALUES (140, 'Sweden');
+INSERT INTO `tblcountry` VALUES (141, 'Switzerland');
+INSERT INTO `tblcountry` VALUES (142, 'Syria');
+INSERT INTO `tblcountry` VALUES (143, 'Taiwan');
+INSERT INTO `tblcountry` VALUES (144, 'Tanzania');
+INSERT INTO `tblcountry` VALUES (145, 'Thailand');
+INSERT INTO `tblcountry` VALUES (146, 'Togo');
+INSERT INTO `tblcountry` VALUES (147, 'Tortola');
+INSERT INTO `tblcountry` VALUES (148, 'Trinidad and Tobago');
+INSERT INTO `tblcountry` VALUES (149, 'Tunisia');
+INSERT INTO `tblcountry` VALUES (150, 'Turkey');
+INSERT INTO `tblcountry` VALUES (151, 'Turks and Caicos');
+INSERT INTO `tblcountry` VALUES (153, 'Uganda');
+INSERT INTO `tblcountry` VALUES (154, 'Ukraine');
+INSERT INTO `tblcountry` VALUES (155, 'Union Island');
+INSERT INTO `tblcountry` VALUES (156, 'United Arab Emirates');
+INSERT INTO `tblcountry` VALUES (157, 'United Kingdom');
+INSERT INTO `tblcountry` VALUES (158, 'United States');
+INSERT INTO `tblcountry` VALUES (159, 'Uruguay');
+INSERT INTO `tblcountry` VALUES (152, 'US Virgin Islands');
+INSERT INTO `tblcountry` VALUES (160, 'Uzbekistan');
+INSERT INTO `tblcountry` VALUES (161, 'Venezuela');
+INSERT INTO `tblcountry` VALUES (162, 'Virgin Gorda');
+INSERT INTO `tblcountry` VALUES (163, 'Yemen');
+INSERT INTO `tblcountry` VALUES (164, 'Yugoslavia');
+INSERT INTO `tblcountry` VALUES (165, 'Zambia');
+INSERT INTO `tblcountry` VALUES (166, 'Zimbabwe');
