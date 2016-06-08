@@ -79,10 +79,8 @@ CREATE TABLE IF NOT EXISTS `hoadon` (
 --
 
 INSERT INTO `hoadon` (`id_hoadon`, `hoten`, `diachi`, `email`, `dienthoai`, `fax`, `cty`, `id`, `soluong`, `tongtien`, `ngaydat`, `tinhtrang`) VALUES
-(32, 'Nguyễn Xuân Quốc', 'Quảng Ngãi', 'xuanquocqn@gmail.com', 1657990372, 25, '', '7', 7, 108220000, '2013-12-21 12:32:15', 'damua'),
-(33, 'Lê Thị Phượng', 'Điện Ngọc - Quảng Nam', 'phuongle.qn.23@gmail.com', 1657990337, 0, 'VIETHANIT', '98', 3, 705000, '2013-12-22 13:57:08', 'dathang'),
-(34, 'Nguyễn Phương Tâm', 'Đà Nẵng', 'phuongtamdn@gmail.com', 2147483647, 0, '', '71368671', 1, 37000000, '2013-12-25 04:44:54', 'dathang'),
-(35, 'Nguyễn Phương Tâm', 'Đà Nẵng', 'phuongtamdn@gmail.com', 2147483647, 0, '', '71368670', 2, 42000000, '2013-12-25 04:44:54', 'dathang');
+
+(35, 'Lê Chí Tâm', 'TPHCM', 'lechitam505@gmail.com', 2147483647, 0, '', '71368670', 2, 42000000, '2013-12-25 04:44:54', 'dathang');
 
 -- --------------------------------------------------------
 
@@ -250,10 +248,7 @@ CREATE TABLE IF NOT EXISTS `thanhvien` (
 --
 
 INSERT INTO `thanhvien` (`hoten`, `diachi`, `email`, `dienthoai`, `user`, `pass`, `hieuluc`, `capquyen`) VALUES
-('Quốc HT05A', 'Đà Nẵng', 'xuanquocqn@gmail.com', 1657990372, 'Admin', '86e6075b9c1dcae75660adf0cf803fb5', 1, 1),
-('Chí Tâm', 'G7 Trường Sơn', 'lechitam505@gmail.com', 969299346, 'chitam', '86e6075b9c1dcae75660adf0cf803fb5', 1, 3),
-('Phượng Le', 'Quảng Nam', 'phuongle.qn.23@gmail.com', 1657993024, 'phuong', '25f9e794323b453885f5181f1b624d0b', 1, 3),
-('Le Thị Phượng', 'Da Nang', 'phuong@gmail.com', 1657990372, 'phuongle', '25f9e794323b453885f5181f1b624d0b', 1, 3);
+('Chí Tâm', 'G7 Trường Sơn', 'lechitam505@gmail.com', 969299346, 'chitam', '0da513e6b85115587ffcb84821a61a3b', 1, 3);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
